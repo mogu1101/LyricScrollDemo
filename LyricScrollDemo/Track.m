@@ -10,4 +10,8 @@
 
 @implementation Track
 
+- (NSString *)lyric {
+    return [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"music.lrc" ofType:nil]  encoding:NSUTF8StringEncoding error:nil];
+}
+
 @end

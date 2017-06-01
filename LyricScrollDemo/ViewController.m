@@ -11,6 +11,7 @@
 #import "Track.h"
 #import "DOUAudioStreamer.h"
 #import "LyricView.h"
+#import "LyricUtils.h"
 
 static void *kStatusKVOKey = &kStatusKVOKey;
 static void *kDurationKVOKey = &kDurationKVOKey;
@@ -21,6 +22,10 @@ static const CGFloat PlayButtonWidth = 80;
 
 @property (nonatomic, strong) DOUAudioStreamer *streamer;
 @property (nonatomic, strong) LyricView *lyricView;
+@property (nonatomic, assign) NSInteger currentLine;
+@property (nonatomic, strong) NSTimer *playTimer;
+@property (nonatomic, strong) NSArray<NSNumber *> *lyricTimes;
+@property (nonatomic, strong) NSArray<NSString *> *lyricLines;
 
 @end
 
@@ -52,7 +57,7 @@ static const CGFloat PlayButtonWidth = 80;
 
 - (void)setupLyricView {
     self.lyricView = [[LyricView alloc] init];
-    self
+    [self.view addSubview:self.lyricView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -83,6 +88,8 @@ static const CGFloat PlayButtonWidth = 80;
 - (void)setupStramer {
     Track *track = [[Track alloc] init];
     track.audioFileURL = [NSURL URLWithString:[NSString stringWithFormat:@"file://%@", [[NSBundle mainBundle] pathForResource:@"music.mp3" ofType:nil]]];
+    self.lyricTimes = [LyricUtils timeArrayWithLyric:track.lyric];
+    self.lyricLines = [LyricUtils lyricArrayWithLyric:track.lyric];
     self.streamer = [DOUAudioStreamer streamerWithAudioFile:track];
     [self.streamer addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:kStatusKVOKey];
     [self.streamer addObserver:self forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:kDurationKVOKey];
@@ -115,6 +122,12 @@ static const CGFloat PlayButtonWidth = 80;
     if (self.streamer.status == DOUAudioStreamerFinished) {
         [self.streamer play];
     }
+    if (@([self.streamer currentTime]).integerValue == self.lyricTimes[self.currentLine].integerValue) {
+        [self.lyricView bindDataWithLyricArray:self.lyricLines playingLine:self.currentLine];
+        self.currentLine += 1;
+    } else if (@([self.streamer currentTime]).integerValue > self.lyricTimes[self.currentLine].integerValue) {
+        self.currentLine += 1;
+    }
 }
 
 - (void)updateStatus {
@@ -145,5 +158,17 @@ static const CGFloat PlayButtonWidth = 80;
     }
 }
 
+- (void)startTimer {
+    [self stopTimer];
+    self.playTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updatePlayerSlider:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.playTimer forMode:NSRunLoopCommonModes];
+}
+
+- (void)stopTimer {
+    if (self.playTimer != nil) {
+        [self.playTimer invalidate];
+        self.playTimer = nil;
+    }
+}
 
 @end
