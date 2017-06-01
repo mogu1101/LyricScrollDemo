@@ -10,6 +10,6 @@
 
 @interface LyricView : UIView
 
-- (void)bindDataWithLyricArray:(NSArray<NSString *> *)lyricArray playingLine:(NSInteger)playingLine;
+- (void)bindDataWithLyricArray:(NSArray<NSString *> *)lyricArray playingLine:(NSInteger)playingLine duration:(CGFloat)duration;
 
 @end

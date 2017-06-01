@@ -14,6 +14,8 @@
 
 + (CGFloat)cellHeightWithText:(NSString *)text;
 
-- (void)bindDataWithText:(NSString *)text highlighted:(BOOL)highlighted;
++ (CGFloat)lyricWidthWithText:(NSString *)text;
+
+- (void)bindDataWithText:(NSString *)text highlighted:(BOOL)highlighted duration:(CGFloat)duration;
 
 @end

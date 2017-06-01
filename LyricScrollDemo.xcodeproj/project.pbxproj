@@ -22,6 +22,7 @@
 		04C078791EE0200700F28B53 /* LyricView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C078781EE0200700F28B53 /* LyricView.m */; };
 		04C0787C1EE0223700F28B53 /* LyricViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0787B1EE0223700F28B53 /* LyricViewCell.m */; };
 		35934FB8565A20A3C2620C82 /* libPods-LyricScrollDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A978D5A3400CA0BEA50E2 /* libPods-LyricScrollDemo.a */; };
+		AB6C6B3E1EE0742100F6D73E /* LXMLyricsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C6B3D1EE0742100F6D73E /* LXMLyricsLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		1C4A978D5A3400CA0BEA50E2 /* libPods-LyricScrollDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LyricScrollDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21682EEB6E50F0FC6A94E882 /* Pods-LyricScrollDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricScrollDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3B4CC09236162B2A93EB856E /* Pods-LyricScrollDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricScrollDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AB6C6B3C1EE0742100F6D73E /* LXMLyricsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMLyricsLabel.h; sourceTree = "<group>"; };
+		AB6C6B3D1EE0742100F6D73E /* LXMLyricsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMLyricsLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 		04C078391EE0028500F28B53 /* LyricScrollDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AB6C6B3C1EE0742100F6D73E /* LXMLyricsLabel.h */,
+				AB6C6B3D1EE0742100F6D73E /* LXMLyricsLabel.m */,
 				04C0783D1EE0028500F28B53 /* AppDelegate.h */,
 				04C0783E1EE0028500F28B53 /* AppDelegate.m */,
 				04C078401EE0028500F28B53 /* ViewController.h */,
@@ -339,7 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B72F9AC3CDEEBC2DD234A9D7 /* [CP] Embed Pods Frameworks */ = {
@@ -381,6 +386,7 @@
 			files = (
 				04C0787C1EE0223700F28B53 /* LyricViewCell.m in Sources */,
 				04C078421EE0028500F28B53 /* ViewController.m in Sources */,
+				AB6C6B3E1EE0742100F6D73E /* LXMLyricsLabel.m in Sources */,
 				04C0783F1EE0028500F28B53 /* AppDelegate.m in Sources */,
 				04C078791EE0200700F28B53 /* LyricView.m in Sources */,
 				04C078761EE0152600F28B53 /* LyricUtils.m in Sources */,

@@ -20,7 +20,7 @@
             NSString *str2 = [line substringWithRange:NSMakeRange(6, 1)];
             if ([str1 isEqualToString:@":"] && [str2 isEqualToString:@"."]) {
 //                NSString *lrcString = [array lastObject];
-                NSNumber *lrcTime = [self timeToSecond:[array[0] substringWithRange:NSMakeRange(1, 5)]];
+                NSNumber *lrcTime = [self timeToSecond:[array[0] substringWithRange:NSMakeRange(1, 8)]];
                 [timeArray addObject:lrcTime];
             }
         }
@@ -47,11 +47,13 @@
 }
 
 + (NSNumber *)timeToSecond:(NSString *)timeString {
-    if ([[timeString substringWithRange:NSMakeRange(2, 1)] isEqualToString:@":"]) {
+    if ([[timeString substringWithRange:NSMakeRange(2, 1)] isEqualToString:@":"] && [[timeString substringWithRange:NSMakeRange(5, 1)] isEqualToString:@"."]) {
         NSArray *array = [timeString componentsSeparatedByString:@":"];
         NSInteger min = [array[0] integerValue];
-        NSInteger sec = [array[1] integerValue];
-        return @(min * 60 + sec);
+        NSArray *secArr = [array[1] componentsSeparatedByString:@"."];
+        NSInteger sec = [secArr[0] integerValue];
+        CGFloat msec = [secArr[1] integerValue] * 0.01;
+        return @(min * 60 + sec + msec);
     }
     return nil;
 }

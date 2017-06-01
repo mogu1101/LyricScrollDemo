@@ -21,6 +21,7 @@ static const CGFloat PlayButtonWidth = 80;
 @interface ViewController ()
 
 @property (nonatomic, strong) DOUAudioStreamer *streamer;
+@property (nonatomic, strong) UIButton *playButton;
 @property (nonatomic, strong) LyricView *lyricView;
 @property (nonatomic, assign) NSInteger currentLine;
 @property (nonatomic, strong) NSTimer *playTimer;
@@ -36,6 +37,7 @@ static const CGFloat PlayButtonWidth = 80;
     
     [self setupPlayButton];
     [self setupLyricView];
+    [self startTimer];
 }
 
 - (void)setupPlayButton {
@@ -53,11 +55,18 @@ static const CGFloat PlayButtonWidth = 80;
         make.centerX.equalTo(self.view);
         make.centerY.equalTo(self.view.mas_bottom).offset(-PlayButtonWidth);
     }];
+    self.playButton = playButton;
 }
 
 - (void)setupLyricView {
     self.lyricView = [[LyricView alloc] init];
     [self.view addSubview:self.lyricView];
+    
+    [self.lyricView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.lyricView.superview).offset(50);
+        make.bottom.equalTo(self.playButton.mas_top).offset(-20);
+        make.left.right.equalTo(self.lyricView.superview);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -122,10 +131,14 @@ static const CGFloat PlayButtonWidth = 80;
     if (self.streamer.status == DOUAudioStreamerFinished) {
         [self.streamer play];
     }
-    if (@([self.streamer currentTime]).integerValue == self.lyricTimes[self.currentLine].integerValue) {
-        [self.lyricView bindDataWithLyricArray:self.lyricLines playingLine:self.currentLine];
-        self.currentLine += 1;
-    } else if (@([self.streamer currentTime]).integerValue > self.lyricTimes[self.currentLine].integerValue) {
+    if (self.currentLine < self.lyricLines.count && fabs([self.streamer currentTime] - self.lyricTimes[self.currentLine].floatValue) < 0.01) {
+        CGFloat duration = 1;
+        if (self.currentLine == self.lyricLines.count - 1) {
+            duration = self.streamer.duration - self.lyricTimes[self.currentLine].floatValue;
+        } else {
+            duration = self.lyricTimes[self.currentLine + 1].floatValue - self.lyricTimes[self.currentLine].floatValue;
+        }
+        [self.lyricView bindDataWithLyricArray:self.lyricLines playingLine:self.currentLine duration:duration];
         self.currentLine += 1;
     }
 }
@@ -160,7 +173,7 @@ static const CGFloat PlayButtonWidth = 80;
 
 - (void)startTimer {
     [self stopTimer];
-    self.playTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updatePlayerSlider:) userInfo:nil repeats:YES];
+    self.playTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updatePlayerSlider:) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:self.playTimer forMode:NSRunLoopCommonModes];
 }
 
