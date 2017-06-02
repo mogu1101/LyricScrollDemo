@@ -30,4 +30,8 @@
 
 - (void)stopAnimation;
 
+- (void)pauseAnimation;
+
+- (void)resumeAnimation;
+
 @end

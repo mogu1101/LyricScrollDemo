@@ -58,4 +58,41 @@
     return nil;
 }
 
++ (NSArray<NSNumber *> *)timeArrayWithLyricLine:(NSString *)line {
+    NSString *pattern = @"(\\d+,\\d+)";
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:pattern options:0 error:nil];
+    NSArray<NSTextCheckingResult *> *results = [regex matchesInString:line options:0 range:NSMakeRange(0, line.length)];
+    NSMutableArray<NSNumber *> *timeArray = [NSMutableArray arrayWithObject:@0];
+    [results enumerateObjectsUsingBlock:^(NSTextCheckingResult * _Nonnull result, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *timeString = [[line substringWithRange:result.range] componentsSeparatedByString:@","][1];
+        NSLog(@"%@", [line substringWithRange:result.range]);
+        CGFloat time = 0;
+        time = timeString.integerValue / 1000.0 + timeArray[idx].floatValue;
+        [timeArray addObject:@(time)];
+    }];
+    return [timeArray copy];
+}
+
++ (NSArray<NSNumber *> *)locationArrayWithLyricLine:(NSString *)line {
+    NSMutableString *tempLine = [line mutableCopy];
+    NSString *pattern = @"\\(\\d+,\\d+\\)";
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:pattern options:0 error:nil];
+    [regex replaceMatchesInString:tempLine options:0 range:NSMakeRange(0, line.length) withTemplate:@"^^"];
+    NSArray<NSString *> *lineComponents = [tempLine componentsSeparatedByString:@"^^"];
+    NSMutableArray<NSNumber *> *locations = [NSMutableArray arrayWithObject:@0];
+    __block CGFloat totalLength = 0;
+    [lineComponents enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        totalLength += obj.length;
+    }];
+    for (NSInteger i = 0, idx = 0; i < lineComponents.count - 1; i++) {
+        NSInteger length = lineComponents[i].length;
+        if (length == 0) {
+            continue;
+        }
+        [locations addObject:@((length + locations[idx].floatValue) / totalLength)];
+    }
+    [locations addObject:@1];
+    return [locations copy];
+}
+
 @end

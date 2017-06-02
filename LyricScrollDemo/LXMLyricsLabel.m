@@ -60,6 +60,11 @@
 - (void)setText:(NSString *)text {
     self.textLabel.text = text;
     self.maskLabel.text = text;
+    [self.maskLabel sizeToFit];
+    [self.textLabel sizeToFit];
+    self.maskLabel.center = self.center;
+    self.textLabel.center = self.center;
+    [self sizeToFit];
 }
 
 - (void)setTextAlignment:(NSTextAlignment)textAlignment {
@@ -78,7 +83,7 @@
     for (int i = 0 ; i < timeArray.count; i++) {
         CGFloat tempTime = [timeArray[i] floatValue] / totalDuration;
         [keyTimeArray addObject:@(tempTime)];
-        CGFloat tempWidth = [locationArray[i] floatValue] * CGRectGetWidth(self.bounds);
+        CGFloat tempWidth = [locationArray[i] floatValue] * CGRectGetWidth(self.maskLabel.bounds);
         [widthArray addObject:@(tempWidth)];
     }
    
@@ -95,6 +100,20 @@
     [self.maskLayer removeAllAnimations];
 }
 
+- (void)pauseAnimation {
+    CFTimeInterval pauseTime = [self.maskLayer convertTime:CACurrentMediaTime() fromLayer:nil];
+    self.maskLayer.speed = 0.0;
+    self.maskLayer.timeOffset = pauseTime;
+}
+
+- (void)resumeAnimation {
+    CFTimeInterval pauseTime = [self.maskLayer timeOffset];
+    self.maskLayer.speed = 1.0;
+    self.maskLayer.timeOffset = 0.0;
+    self.maskLayer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [self.maskLayer convertTime:CACurrentMediaTime() fromLayer:nil] - pauseTime;
+    self.maskLayer.beginTime = timeSincePause;
+}
 
 #pragma mark - property
 

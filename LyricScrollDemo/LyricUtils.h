@@ -15,4 +15,8 @@
 
 + (NSArray<NSString *> *)lyricArrayWithLyric:(NSString *)lyric;
 
++ (NSArray<NSNumber *> *)timeArrayWithLyricLine:(NSString *)line;
+
++ (NSArray<NSNumber *> *)locationArrayWithLyricLine:(NSString *)line;
+
 @end

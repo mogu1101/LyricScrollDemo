@@ -80,8 +80,10 @@ static const CGFloat PlayButtonWidth = 80;
     button.selected = !button.selected;
     if (self.streamer.status == DOUAudioStreamerPaused) {
         [self.streamer play];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"MusicPlayStatus" object:self userInfo:@{@"play": @(YES)}];
     } else {
         [self.streamer pause];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"MusicPlayStatus" object:self userInfo:@{@"play": @(NO)}];
     }
 }
 
