@@ -1,661 +1,1446 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		04C0783C1EE0028500F28B53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0783B1EE0028500F28B53 /* main.m */; };
-		04C0783F1EE0028500F28B53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0783E1EE0028500F28B53 /* AppDelegate.m */; };
-		04C078421EE0028500F28B53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C078411EE0028500F28B53 /* ViewController.m */; };
-		04C078451EE0028500F28B53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C078431EE0028500F28B53 /* Main.storyboard */; };
-		04C078471EE0028500F28B53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C078461EE0028500F28B53 /* Assets.xcassets */; };
-		04C0784A1EE0028500F28B53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C078481EE0028500F28B53 /* LaunchScreen.storyboard */; };
-		04C078551EE0028500F28B53 /* LyricScrollDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C078541EE0028500F28B53 /* LyricScrollDemoTests.m */; };
-		04C078601EE0028500F28B53 /* LyricScrollDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0785F1EE0028500F28B53 /* LyricScrollDemoUITests.m */; };
-		04C0786F1EE0074B00F28B53 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0786E1EE0074B00F28B53 /* Track.m */; };
-		04C078721EE0094D00F28B53 /* music.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 04C078701EE0094D00F28B53 /* music.lrc */; };
-		04C078731EE0094D00F28B53 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04C078711EE0094D00F28B53 /* music.mp3 */; };
-		04C078761EE0152600F28B53 /* LyricUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C078751EE0152600F28B53 /* LyricUtils.m */; };
-		04C078791EE0200700F28B53 /* LyricView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C078781EE0200700F28B53 /* LyricView.m */; };
-		04C0787C1EE0223700F28B53 /* LyricViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C0787B1EE0223700F28B53 /* LyricViewCell.m */; };
-		35934FB8565A20A3C2620C82 /* libPods-LyricScrollDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A978D5A3400CA0BEA50E2 /* libPods-LyricScrollDemo.a */; };
-		AB6C6B3E1EE0742100F6D73E /* LXMLyricsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C6B3D1EE0742100F6D73E /* LXMLyricsLabel.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		04C078511EE0028500F28B53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04C0782F1EE0028500F28B53 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04C078361EE0028500F28B53;
-			remoteInfo = LyricScrollDemo;
-		};
-		04C0785C1EE0028500F28B53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04C0782F1EE0028500F28B53 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04C078361EE0028500F28B53;
-			remoteInfo = LyricScrollDemo;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		04C078371EE0028500F28B53 /* LyricScrollDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricScrollDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04C0783B1EE0028500F28B53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04C0783D1EE0028500F28B53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		04C0783E1EE0028500F28B53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04C078401EE0028500F28B53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04C078411EE0028500F28B53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04C078441EE0028500F28B53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04C078461EE0028500F28B53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04C078491EE0028500F28B53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		04C0784B1EE0028500F28B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04C078501EE0028500F28B53 /* LyricScrollDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricScrollDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04C078541EE0028500F28B53 /* LyricScrollDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricScrollDemoTests.m; sourceTree = "<group>"; };
-		04C078561EE0028500F28B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04C0785B1EE0028500F28B53 /* LyricScrollDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricScrollDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04C0785F1EE0028500F28B53 /* LyricScrollDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricScrollDemoUITests.m; sourceTree = "<group>"; };
-		04C078611EE0028500F28B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04C0786D1EE0074B00F28B53 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
-		04C0786E1EE0074B00F28B53 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
-		04C078701EE0094D00F28B53 /* music.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = music.lrc; sourceTree = SOURCE_ROOT; };
-		04C078711EE0094D00F28B53 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = SOURCE_ROOT; };
-		04C078741EE0152600F28B53 /* LyricUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricUtils.h; sourceTree = "<group>"; };
-		04C078751EE0152600F28B53 /* LyricUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricUtils.m; sourceTree = "<group>"; };
-		04C078771EE0200700F28B53 /* LyricView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricView.h; sourceTree = "<group>"; };
-		04C078781EE0200700F28B53 /* LyricView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricView.m; sourceTree = "<group>"; };
-		04C0787A1EE0223700F28B53 /* LyricViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricViewCell.h; sourceTree = "<group>"; };
-		04C0787B1EE0223700F28B53 /* LyricViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricViewCell.m; sourceTree = "<group>"; };
-		1C4A978D5A3400CA0BEA50E2 /* libPods-LyricScrollDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LyricScrollDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		21682EEB6E50F0FC6A94E882 /* Pods-LyricScrollDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricScrollDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo.release.xcconfig"; sourceTree = "<group>"; };
-		3B4CC09236162B2A93EB856E /* Pods-LyricScrollDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricScrollDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		AB6C6B3C1EE0742100F6D73E /* LXMLyricsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMLyricsLabel.h; sourceTree = "<group>"; };
-		AB6C6B3D1EE0742100F6D73E /* LXMLyricsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMLyricsLabel.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		04C078341EE0028500F28B53 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				35934FB8565A20A3C2620C82 /* libPods-LyricScrollDemo.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C0784D1EE0028500F28B53 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C078581EE0028500F28B53 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		04C0782E1EE0028500F28B53 = {
-			isa = PBXGroup;
-			children = (
-				04C078391EE0028500F28B53 /* LyricScrollDemo */,
-				04C078531EE0028500F28B53 /* LyricScrollDemoTests */,
-				04C0785E1EE0028500F28B53 /* LyricScrollDemoUITests */,
-				04C078381EE0028500F28B53 /* Products */,
-				3D6D1F8C28402A07685F3022 /* Pods */,
-				5FEB19DCD5E045C7356B14ED /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		04C078381EE0028500F28B53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				04C078371EE0028500F28B53 /* LyricScrollDemo.app */,
-				04C078501EE0028500F28B53 /* LyricScrollDemoTests.xctest */,
-				04C0785B1EE0028500F28B53 /* LyricScrollDemoUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		04C078391EE0028500F28B53 /* LyricScrollDemo */ = {
-			isa = PBXGroup;
-			children = (
-				AB6C6B3C1EE0742100F6D73E /* LXMLyricsLabel.h */,
-				AB6C6B3D1EE0742100F6D73E /* LXMLyricsLabel.m */,
-				04C0783D1EE0028500F28B53 /* AppDelegate.h */,
-				04C0783E1EE0028500F28B53 /* AppDelegate.m */,
-				04C078401EE0028500F28B53 /* ViewController.h */,
-				04C078411EE0028500F28B53 /* ViewController.m */,
-				04C078431EE0028500F28B53 /* Main.storyboard */,
-				04C078461EE0028500F28B53 /* Assets.xcassets */,
-				04C078481EE0028500F28B53 /* LaunchScreen.storyboard */,
-				04C0784B1EE0028500F28B53 /* Info.plist */,
-				04C0783A1EE0028500F28B53 /* Supporting Files */,
-				04C0786D1EE0074B00F28B53 /* Track.h */,
-				04C0786E1EE0074B00F28B53 /* Track.m */,
-				04C078741EE0152600F28B53 /* LyricUtils.h */,
-				04C078751EE0152600F28B53 /* LyricUtils.m */,
-				04C078771EE0200700F28B53 /* LyricView.h */,
-				04C078781EE0200700F28B53 /* LyricView.m */,
-				04C0787A1EE0223700F28B53 /* LyricViewCell.h */,
-				04C0787B1EE0223700F28B53 /* LyricViewCell.m */,
-			);
-			path = LyricScrollDemo;
-			sourceTree = "<group>";
-		};
-		04C0783A1EE0028500F28B53 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				04C078701EE0094D00F28B53 /* music.lrc */,
-				04C078711EE0094D00F28B53 /* music.mp3 */,
-				04C0783B1EE0028500F28B53 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		04C078531EE0028500F28B53 /* LyricScrollDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				04C078541EE0028500F28B53 /* LyricScrollDemoTests.m */,
-				04C078561EE0028500F28B53 /* Info.plist */,
-			);
-			path = LyricScrollDemoTests;
-			sourceTree = "<group>";
-		};
-		04C0785E1EE0028500F28B53 /* LyricScrollDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				04C0785F1EE0028500F28B53 /* LyricScrollDemoUITests.m */,
-				04C078611EE0028500F28B53 /* Info.plist */,
-			);
-			path = LyricScrollDemoUITests;
-			sourceTree = "<group>";
-		};
-		3D6D1F8C28402A07685F3022 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4CC09236162B2A93EB856E /* Pods-LyricScrollDemo.debug.xcconfig */,
-				21682EEB6E50F0FC6A94E882 /* Pods-LyricScrollDemo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5FEB19DCD5E045C7356B14ED /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1C4A978D5A3400CA0BEA50E2 /* libPods-LyricScrollDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		04C078361EE0028500F28B53 /* LyricScrollDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04C078641EE0028500F28B53 /* Build configuration list for PBXNativeTarget "LyricScrollDemo" */;
-			buildPhases = (
-				B0FB3ADE2A5D29A7156B224A /* [CP] Check Pods Manifest.lock */,
-				04C078331EE0028500F28B53 /* Sources */,
-				04C078341EE0028500F28B53 /* Frameworks */,
-				04C078351EE0028500F28B53 /* Resources */,
-				B72F9AC3CDEEBC2DD234A9D7 /* [CP] Embed Pods Frameworks */,
-				E4EED63277240703332A8539 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LyricScrollDemo;
-			productName = LyricScrollDemo;
-			productReference = 04C078371EE0028500F28B53 /* LyricScrollDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
-		04C0784F1EE0028500F28B53 /* LyricScrollDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04C078671EE0028500F28B53 /* Build configuration list for PBXNativeTarget "LyricScrollDemoTests" */;
-			buildPhases = (
-				04C0784C1EE0028500F28B53 /* Sources */,
-				04C0784D1EE0028500F28B53 /* Frameworks */,
-				04C0784E1EE0028500F28B53 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04C078521EE0028500F28B53 /* PBXTargetDependency */,
-			);
-			name = LyricScrollDemoTests;
-			productName = LyricScrollDemoTests;
-			productReference = 04C078501EE0028500F28B53 /* LyricScrollDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		04C0785A1EE0028500F28B53 /* LyricScrollDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04C0786A1EE0028500F28B53 /* Build configuration list for PBXNativeTarget "LyricScrollDemoUITests" */;
-			buildPhases = (
-				04C078571EE0028500F28B53 /* Sources */,
-				04C078581EE0028500F28B53 /* Frameworks */,
-				04C078591EE0028500F28B53 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04C0785D1EE0028500F28B53 /* PBXTargetDependency */,
-			);
-			name = LyricScrollDemoUITests;
-			productName = LyricScrollDemoUITests;
-			productReference = 04C0785B1EE0028500F28B53 /* LyricScrollDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		04C0782F1EE0028500F28B53 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "jj L";
-				TargetAttributes = {
-					04C078361EE0028500F28B53 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8G4B9H2TZU;
-						ProvisioningStyle = Automatic;
-					};
-					04C0784F1EE0028500F28B53 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8G4B9H2TZU;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 04C078361EE0028500F28B53;
-					};
-					04C0785A1EE0028500F28B53 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8G4B9H2TZU;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 04C078361EE0028500F28B53;
-					};
-				};
-			};
-			buildConfigurationList = 04C078321EE0028500F28B53 /* Build configuration list for PBXProject "LyricScrollDemo" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 04C0782E1EE0028500F28B53;
-			productRefGroup = 04C078381EE0028500F28B53 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				04C078361EE0028500F28B53 /* LyricScrollDemo */,
-				04C0784F1EE0028500F28B53 /* LyricScrollDemoTests */,
-				04C0785A1EE0028500F28B53 /* LyricScrollDemoUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		04C078351EE0028500F28B53 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04C078731EE0094D00F28B53 /* music.mp3 in Resources */,
-				04C0784A1EE0028500F28B53 /* LaunchScreen.storyboard in Resources */,
-				04C078721EE0094D00F28B53 /* music.lrc in Resources */,
-				04C078471EE0028500F28B53 /* Assets.xcassets in Resources */,
-				04C078451EE0028500F28B53 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C0784E1EE0028500F28B53 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C078591EE0028500F28B53 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B0FB3ADE2A5D29A7156B224A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B72F9AC3CDEEBC2DD234A9D7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4EED63277240703332A8539 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		04C078331EE0028500F28B53 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04C0787C1EE0223700F28B53 /* LyricViewCell.m in Sources */,
-				04C078421EE0028500F28B53 /* ViewController.m in Sources */,
-				AB6C6B3E1EE0742100F6D73E /* LXMLyricsLabel.m in Sources */,
-				04C0783F1EE0028500F28B53 /* AppDelegate.m in Sources */,
-				04C078791EE0200700F28B53 /* LyricView.m in Sources */,
-				04C078761EE0152600F28B53 /* LyricUtils.m in Sources */,
-				04C0783C1EE0028500F28B53 /* main.m in Sources */,
-				04C0786F1EE0074B00F28B53 /* Track.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C0784C1EE0028500F28B53 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04C078551EE0028500F28B53 /* LyricScrollDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C078571EE0028500F28B53 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04C078601EE0028500F28B53 /* LyricScrollDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		04C078521EE0028500F28B53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04C078361EE0028500F28B53 /* LyricScrollDemo */;
-			targetProxy = 04C078511EE0028500F28B53 /* PBXContainerItemProxy */;
-		};
-		04C0785D1EE0028500F28B53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04C078361EE0028500F28B53 /* LyricScrollDemo */;
-			targetProxy = 04C0785C1EE0028500F28B53 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		04C078431EE0028500F28B53 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04C078441EE0028500F28B53 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		04C078481EE0028500F28B53 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04C078491EE0028500F28B53 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		04C078621EE0028500F28B53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		04C078631EE0028500F28B53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		04C078651EE0028500F28B53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4CC09236162B2A93EB856E /* Pods-LyricScrollDemo.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8G4B9H2TZU;
-				INFOPLIST_FILE = LyricScrollDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuantiku.LyricScrollDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		04C078661EE0028500F28B53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21682EEB6E50F0FC6A94E882 /* Pods-LyricScrollDemo.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8G4B9H2TZU;
-				INFOPLIST_FILE = LyricScrollDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuantiku.LyricScrollDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		04C078681EE0028500F28B53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 8G4B9H2TZU;
-				INFOPLIST_FILE = LyricScrollDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuantiku.LyricScrollDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LyricScrollDemo.app/LyricScrollDemo";
-			};
-			name = Debug;
-		};
-		04C078691EE0028500F28B53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 8G4B9H2TZU;
-				INFOPLIST_FILE = LyricScrollDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuantiku.LyricScrollDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LyricScrollDemo.app/LyricScrollDemo";
-			};
-			name = Release;
-		};
-		04C0786B1EE0028500F28B53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 8G4B9H2TZU;
-				INFOPLIST_FILE = LyricScrollDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuantiku.LyricScrollDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = LyricScrollDemo;
-			};
-			name = Debug;
-		};
-		04C0786C1EE0028500F28B53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 8G4B9H2TZU;
-				INFOPLIST_FILE = LyricScrollDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuantiku.LyricScrollDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = LyricScrollDemo;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		04C078321EE0028500F28B53 /* Build configuration list for PBXProject "LyricScrollDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04C078621EE0028500F28B53 /* Debug */,
-				04C078631EE0028500F28B53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04C078641EE0028500F28B53 /* Build configuration list for PBXNativeTarget "LyricScrollDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04C078651EE0028500F28B53 /* Debug */,
-				04C078661EE0028500F28B53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04C078671EE0028500F28B53 /* Build configuration list for PBXNativeTarget "LyricScrollDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04C078681EE0028500F28B53 /* Debug */,
-				04C078691EE0028500F28B53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04C0786A1EE0028500F28B53 /* Build configuration list for PBXNativeTarget "LyricScrollDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04C0786B1EE0028500F28B53 /* Debug */,
-				04C0786C1EE0028500F28B53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 04C0782F1EE0028500F28B53 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>04C0782E1EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>04C078391EE0028500F28B53</string>
+				<string>04C078531EE0028500F28B53</string>
+				<string>04C0785E1EE0028500F28B53</string>
+				<string>04C078381EE0028500F28B53</string>
+				<string>3D6D1F8C28402A07685F3022</string>
+				<string>5FEB19DCD5E045C7356B14ED</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0782F1EE0028500F28B53</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0830</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>jj L</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>04C078361EE0028500F28B53</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.3.2</string>
+						<key>DevelopmentTeam</key>
+						<string>8G4B9H2TZU</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+					</dict>
+					<key>04C0784F1EE0028500F28B53</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.3.2</string>
+						<key>DevelopmentTeam</key>
+						<string>8G4B9H2TZU</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+						<key>TestTargetID</key>
+						<string>04C078361EE0028500F28B53</string>
+					</dict>
+					<key>04C0785A1EE0028500F28B53</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.3.2</string>
+						<key>DevelopmentTeam</key>
+						<string>8G4B9H2TZU</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+						<key>TestTargetID</key>
+						<string>04C078361EE0028500F28B53</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>04C078321EE0028500F28B53</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>04C0782E1EE0028500F28B53</string>
+			<key>productRefGroup</key>
+			<string>04C078381EE0028500F28B53</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>04C078361EE0028500F28B53</string>
+				<string>04C0784F1EE0028500F28B53</string>
+				<string>04C0785A1EE0028500F28B53</string>
+			</array>
+		</dict>
+		<key>04C078321EE0028500F28B53</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>04C078621EE0028500F28B53</string>
+				<string>04C078631EE0028500F28B53</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>04C078331EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>04C0787C1EE0223700F28B53</string>
+				<string>04C078421EE0028500F28B53</string>
+				<string>AB6C6B3E1EE0742100F6D73E</string>
+				<string>04C0783F1EE0028500F28B53</string>
+				<string>04C078791EE0200700F28B53</string>
+				<string>04C078761EE0152600F28B53</string>
+				<string>04C0783C1EE0028500F28B53</string>
+				<string>04C0786F1EE0074B00F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C078341EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>35934FB8565A20A3C2620C82</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C078351EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>04C078731EE0094D00F28B53</string>
+				<string>04C0784A1EE0028500F28B53</string>
+				<string>04C078721EE0094D00F28B53</string>
+				<string>04C078471EE0028500F28B53</string>
+				<string>04C078451EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C078361EE0028500F28B53</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>04C078641EE0028500F28B53</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B0FB3ADE2A5D29A7156B224A</string>
+				<string>04C078331EE0028500F28B53</string>
+				<string>04C078341EE0028500F28B53</string>
+				<string>04C078351EE0028500F28B53</string>
+				<string>B72F9AC3CDEEBC2DD234A9D7</string>
+				<string>E4EED63277240703332A8539</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LyricScrollDemo</string>
+			<key>productName</key>
+			<string>LyricScrollDemo</string>
+			<key>productReference</key>
+			<string>04C078371EE0028500F28B53</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>04C078371EE0028500F28B53</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LyricScrollDemo.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>04C078381EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>04C078371EE0028500F28B53</string>
+				<string>04C078501EE0028500F28B53</string>
+				<string>04C0785B1EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078391EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB6C6B3C1EE0742100F6D73E</string>
+				<string>AB6C6B3D1EE0742100F6D73E</string>
+				<string>04C0783D1EE0028500F28B53</string>
+				<string>04C0783E1EE0028500F28B53</string>
+				<string>04C078401EE0028500F28B53</string>
+				<string>04C078411EE0028500F28B53</string>
+				<string>04C078431EE0028500F28B53</string>
+				<string>04C078461EE0028500F28B53</string>
+				<string>04C078481EE0028500F28B53</string>
+				<string>04C0784B1EE0028500F28B53</string>
+				<string>04C0783A1EE0028500F28B53</string>
+				<string>04C0786D1EE0074B00F28B53</string>
+				<string>04C0786E1EE0074B00F28B53</string>
+				<string>04C078741EE0152600F28B53</string>
+				<string>04C078751EE0152600F28B53</string>
+				<string>04C078771EE0200700F28B53</string>
+				<string>04C078781EE0200700F28B53</string>
+				<string>04C0787A1EE0223700F28B53</string>
+				<string>04C0787B1EE0223700F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LyricScrollDemo</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0783A1EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>04C078701EE0094D00F28B53</string>
+				<string>04C078711EE0094D00F28B53</string>
+				<string>04C0783B1EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0783B1EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0783C1EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C0783B1EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C0783D1EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0783E1EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0783F1EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C0783E1EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078401EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078411EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078421EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078411EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078431EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>04C078441EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078441EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078451EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078431EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078461EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078471EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078461EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078481EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>04C078491EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078491EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0784A1EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078481EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C0784B1EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0784C1EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>04C078551EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C0784D1EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C0784E1EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C0784F1EE0028500F28B53</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>04C078671EE0028500F28B53</string>
+			<key>buildPhases</key>
+			<array>
+				<string>04C0784C1EE0028500F28B53</string>
+				<string>04C0784D1EE0028500F28B53</string>
+				<string>04C0784E1EE0028500F28B53</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>04C078521EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LyricScrollDemoTests</string>
+			<key>productName</key>
+			<string>LyricScrollDemoTests</string>
+			<key>productReference</key>
+			<string>04C078501EE0028500F28B53</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>04C078501EE0028500F28B53</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LyricScrollDemoTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>04C078511EE0028500F28B53</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>04C0782F1EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>04C078361EE0028500F28B53</string>
+			<key>remoteInfo</key>
+			<string>LyricScrollDemo</string>
+		</dict>
+		<key>04C078521EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>04C078361EE0028500F28B53</string>
+			<key>targetProxy</key>
+			<string>04C078511EE0028500F28B53</string>
+		</dict>
+		<key>04C078531EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>04C078541EE0028500F28B53</string>
+				<string>04C078561EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LyricScrollDemoTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078541EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LyricScrollDemoTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078551EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078541EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078561EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078571EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>04C078601EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C078581EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C078591EE0028500F28B53</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>04C0785A1EE0028500F28B53</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>04C0786A1EE0028500F28B53</string>
+			<key>buildPhases</key>
+			<array>
+				<string>04C078571EE0028500F28B53</string>
+				<string>04C078581EE0028500F28B53</string>
+				<string>04C078591EE0028500F28B53</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>04C0785D1EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LyricScrollDemoUITests</string>
+			<key>productName</key>
+			<string>LyricScrollDemoUITests</string>
+			<key>productReference</key>
+			<string>04C0785B1EE0028500F28B53</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>04C0785B1EE0028500F28B53</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LyricScrollDemoUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>04C0785C1EE0028500F28B53</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>04C0782F1EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>04C078361EE0028500F28B53</string>
+			<key>remoteInfo</key>
+			<string>LyricScrollDemo</string>
+		</dict>
+		<key>04C0785D1EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>04C078361EE0028500F28B53</string>
+			<key>targetProxy</key>
+			<string>04C0785C1EE0028500F28B53</string>
+		</dict>
+		<key>04C0785E1EE0028500F28B53</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>04C0785F1EE0028500F28B53</string>
+				<string>04C078611EE0028500F28B53</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LyricScrollDemoUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0785F1EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LyricScrollDemoUITests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078601EE0028500F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C0785F1EE0028500F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078611EE0028500F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078621EE0028500F28B53</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>04C078631EE0028500F28B53</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>04C078641EE0028500F28B53</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>04C078651EE0028500F28B53</string>
+				<string>04C078661EE0028500F28B53</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>04C078651EE0028500F28B53</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3B4CC09236162B2A93EB856E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>8G4B9H2TZU</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LyricScrollDemo/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.yuantiku.LyricScrollDemo</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>04C078661EE0028500F28B53</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>21682EEB6E50F0FC6A94E882</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>8G4B9H2TZU</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LyricScrollDemo/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.yuantiku.LyricScrollDemo</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>04C078671EE0028500F28B53</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>04C078681EE0028500F28B53</string>
+				<string>04C078691EE0028500F28B53</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>04C078681EE0028500F28B53</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>8G4B9H2TZU</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LyricScrollDemoTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.yuantiku.LyricScrollDemoTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/LyricScrollDemo.app/LyricScrollDemo</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>04C078691EE0028500F28B53</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>8G4B9H2TZU</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LyricScrollDemoTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.yuantiku.LyricScrollDemoTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/LyricScrollDemo.app/LyricScrollDemo</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>04C0786A1EE0028500F28B53</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>04C0786B1EE0028500F28B53</string>
+				<string>04C0786C1EE0028500F28B53</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>04C0786B1EE0028500F28B53</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>8G4B9H2TZU</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LyricScrollDemoUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.yuantiku.LyricScrollDemoUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>LyricScrollDemo</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>04C0786C1EE0028500F28B53</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>8G4B9H2TZU</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LyricScrollDemoUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.yuantiku.LyricScrollDemoUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>LyricScrollDemo</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>04C0786D1EE0074B00F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Track.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0786E1EE0074B00F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Track.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0786F1EE0074B00F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C0786E1EE0074B00F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078701EE0094D00F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>music.lrc</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>04C078711EE0094D00F28B53</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.mp3</string>
+			<key>path</key>
+			<string>music.mp3</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>04C078721EE0094D00F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078701EE0094D00F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078731EE0094D00F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078711EE0094D00F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078741EE0152600F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LyricUtils.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078751EE0152600F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LyricUtils.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078761EE0152600F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078751EE0152600F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C078771EE0200700F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LyricView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078781EE0200700F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LyricView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C078791EE0200700F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C078781EE0200700F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>04C0787A1EE0223700F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LyricViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0787B1EE0223700F28B53</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LyricViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C0787C1EE0223700F28B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04C0787B1EE0223700F28B53</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C4A978D5A3400CA0BEA50E2</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-LyricScrollDemo.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>21682EEB6E50F0FC6A94E882</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LyricScrollDemo.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>35934FB8565A20A3C2620C82</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C4A978D5A3400CA0BEA50E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3B4CC09236162B2A93EB856E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LyricScrollDemo.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3D6D1F8C28402A07685F3022</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3B4CC09236162B2A93EB856E</string>
+				<string>21682EEB6E50F0FC6A94E882</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5FEB19DCD5E045C7356B14ED</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C4A978D5A3400CA0BEA50E2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB6C6B3C1EE0742100F6D73E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LXMLyricsLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB6C6B3D1EE0742100F6D73E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LXMLyricsLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB6C6B3E1EE0742100F6D73E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB6C6B3D1EE0742100F6D73E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B0FB3ADE2A5D29A7156B224A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B72F9AC3CDEEBC2DD234A9D7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>E4EED63277240703332A8539</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-LyricScrollDemo/Pods-LyricScrollDemo-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>04C0782F1EE0028500F28B53</string>
+</dict>
+</plist>

@@ -79,6 +79,10 @@ static const NSInteger LyricFont = 15;
         NSArray *locationArray = [LyricUtils locationArrayWithLyricLine:text];
         NSLog(@"%@", timeArray);
         NSLog(@"%@", locationArray);
+        if (timeArray.count <= 1) {
+            timeArray = @[@0, @(duration)];
+            locationArray = @[@0, @1];
+        }
         [self.label startLyricsAnimationWithTimeArray:timeArray andLocationArray:locationArray];
     } else {
         [self.label stopAnimation];
